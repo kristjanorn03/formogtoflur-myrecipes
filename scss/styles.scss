@@ -2,15 +2,16 @@
 $font: 'Merriweather', serif ;
 $fontcolor: rgb(0, 128, 128);
 $bgcolor: rgb(177, 199, 166);
-body {
+
+body { 
     background-color: $bgcolor;
     font-family: $font;
 }
 h1, h2, h3 {
     color: $fontcolor;
 } 
-.imgs {  
-    max-width: 100%;
+.imgs {   
+    max-width: 100%; 
     height: auto;
 }
 div .imgs {
@@ -19,7 +20,33 @@ div .imgs {
 img {
     max-width:100%; 
     height:auto; 
-} 
+}
+.label {
+    padding-bottom: 1em; 
+}
+.centre {
+    margin: 1em auto;
+}
+.register form {
+    margin-bottom: 1em;
+}
+.register fieldset {
+    border: 1px solid #f77;
+    border-radius: .5em;
+    padding: 1em;
+    margin: 0 .5em;
+}
+.register input, .register select, .register textarea {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: #2b4949;
+    display: inline;
+    margin: .3em 0 1em 0;
+    padding: .3em .5em;
+}
+.register textarea, .register select {
+    width: 96%;
+}
 .mybutton {
     background: #f7786b;
     font-size: 0.75em; 
@@ -96,5 +123,5 @@ img {
     background: url("../img/hot_plain_bread.svg") bottom right no-repeat;
     padding-right: 20em; 
 }
-// ná í stílsíðuna 
-@import "layout","socialButts","iconfonts","advert","topmenu"; 
+// ná í stílsíðuna   
+@import "layout","socialButts","iconfonts","advert","topmenu","tables";  

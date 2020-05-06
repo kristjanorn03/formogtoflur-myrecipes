@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <title>My Recipes</title>
+</head>
+<body class="container">
+    <header class="headcol-2">
+        <div> 
+            <a href="index.html">
+                <img class="mynd" src="verkefni4-myndir/my-recipes.svg" alt="">
+            </a>
+        </div>
+        <nav class="topnav">
+            <input type="checkbox" id="toggle" class="menuInput">
+            <label for="toggle" class="menuLabel"><span class="icon-menu"></span></label>
+            <ul class="topmenu">
+                <li>
+                    <a class="anotherButton" href="bread.html"><span class="icon-bread"></span> Bread</a>
+                </li>
+                <li>
+                    <a class="anotherButton" href="#"><span class="icon-starters"></span> Starters</a>
+                </li>
+                <li>
+                    <a class="anotherButton" href="#"><span class="icon-mainCourse"></span> Main courses</a>
+                </li>
+                <li>
+                    <a class="anotherButton" href="#"><span class="icon-desserts"></span> Desserts</a>
+                </li>
+                <li>
+                    <a class="anotherButton" href="#"><span class="icon-drinks"></span> Drinks</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="col-3-1">
+            <div class="card">
+                <div class="register">
+                    <form action="#" method="get" class="centre">
+                        <fieldset>
+                            <legend>Required fields are marked *</legend>
+                            <label>
+                                <h3>My Recipe</h3>
+                                <textarea rows="6" name="Athugasemdir" autofocus></textarea>
+                            </label>
+                            <div class="col-2">
+                                <section>
+                                    <label>
+                                        Recipe catecory
+                                        <select name="fjöldi" max-width="14em">
+                                            <option value="0" selected="">Choose category</option>
+                                            <option value="1">Bread</option>
+                                            <option value="2">Starters</option>
+                                            <option value="3">Main Courses</option>
+                                            <option value="4">Desserts</option>
+                                            <option value="5">Drink</option>
+                                        </select>
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Link to recipe (if available) <input type="url" name="url" placeholder="http:// or https://">
+                                    </label>
+                                    <br><!-- skoðunakönnun -->      
+                                    Rate this recipe <br>
+                                    <label><input type="radio" name="rate" value="easy"> ⭐ Easy recipe</label><br> 
+                                    <label><input type="radio" name="rate" value="quality"> ⭐⭐ Quality recipe</label><br> 
+                                    <label><input type="radio" name="rate" value="exotic"> ⭐⭐⭐ Exotic recipe</label>                    
+                                </section>
+                                <section>
+                                    <label>
+                                        Name*
+                                        <input type="text" name="nafn" placeholder="Full name" required="" title="Vinsamlegast skráið nafn"> <!--ATH! input hefur ekki lokunartag -->
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Telephone*
+                                        <input type="tel" name="telephone" placeholder="123 4567" title="put only digits" required="">
+                                    </label>
+                                    <br>    <!-- http://html5pattern.com/Phones "\d{3}(?:[\-\s]?)\d{4}" -->
+                                    <label>
+                                        Email*
+                                        <input type="email" name="email" placeholder="Valid Email @ddress" required="">
+                                        </label>
+                                    <br>
+                                    <label>
+                                        Date of writing*  
+                                        <input type="date" name="dagsetning" required="">
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-2">
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="save-me" value="saveme"> Register me to My Recipes food club
+                                    <label>
+                                    <br> 
+                                    <label>
+                                        <input type="checkbox" name="send-me" value="sendme"> Let me know when new recipes are published
+                                    </label>
+                                </p>        
+                                <p>
+                                    <em>Your email address will not be published.</em>
+                                    <br>
+                                    <input type="submit" name="submit" value="Send"></p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div>
+                {% include "auglysing.html" %}
+            </div>
+        </section>
+    {% include "socialButts.html" %}
+    </main>
+</body>
+</html>

@@ -80,9 +80,9 @@
         grid-gap: 2em;
         grid-template-areas:
             "splashlogo auglysing"
-            "kynning auglysing";
+            "kynning auglysing"; 
     }
-    .splashlogo {
+    .splashlogo {  
         grid-area: splashlogo;
     }
     .kynning {

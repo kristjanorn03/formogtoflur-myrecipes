@@ -16,6 +16,8 @@
             <img class="image" src="verkefni4-myndir/my-recipes.svg" alt="">
         </div>
         <nav class="topnav">
+            <input type="checkbox" id="toggle" class="menuInput">
+            <label for="toggle" class="menuLabel"><span class="icon-menu"></span></label>
             <ul class="topmenu">
                 <li>
                     <a class="anotherButton" href="bread.html"><span class="icon-bread"></span> Bread</a>
@@ -38,12 +40,12 @@
     <main>
         <section class="col-3-1">
             <div class="splashlogo">
-                <img src="verkefni4-myndir/hot_plain_bread.svg" alt="">
+                {% include "toflur.html" %}
             </div>
             {% include "auglysing.html" %}
             <div class="kynning">
                 <h2>
-                    Scalable Vector Graphics. Í 4. verkefni búum við til nýja forsíðu á uppskriftarvefinn og notum SVG tákn í lógó og leturtákn í efnisyfirliti.  Til að byrja með notum við vefsíðurnar úr 3. verkefni sem undirsíður og höfum aðra tengla í efnisyfirlitinu óvirka. 
+                    Velkominn a Uppskriftarsíðu mína, Krístjáns.
                 </h2>
             </div>
         </section>

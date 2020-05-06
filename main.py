@@ -20,8 +20,10 @@ env = Environment(loader=PackageLoader('main', 'templates'))
 index_template = env.get_template('index.html')
 bread_template = env.get_template('bread.html')
 post_template = env.get_template('post.html')
+reply_template = env.get_template('reply.html')
 
 index_html = index_template.render()
+reply_html = reply_template.render()
 
 #setjum md í færibreytur posts og tags
 posts_metadata = [POSTS[post].metadata for post in POSTS]
@@ -29,11 +31,14 @@ tags = [post['tags'] for post in posts_metadata]
 bread_html = bread_template.render(posts=posts_metadata, tags=tags)
 
 #ekki output heldur upp úr vinnumöppunni og í recipes möppuna
-with open('../complex-myrecipes-output/index.html', 'w',encoding="utf-8") as file:
+with open('../formogtoflur-myrecipes-output/index.html', 'w',encoding="utf-8") as file:
     file.write(index_html)
 
-with open('../complex-myrecipes-output/bread.html', 'w',encoding="utf-8") as file:
+with open('../formogtoflur-myrecipes-output/bread.html', 'w',encoding="utf-8") as file:
     file.write(bread_html)
+
+with open('../formogtoflur-myrecipes-output/reply.html', 'w',encoding="utf-8") as file:
+    file.write(reply_html)
 
 for post in POSTS:
     post_metadata = POSTS[post].metadata
@@ -47,7 +52,7 @@ for post in POSTS:
 
     post_html = post_template.render(post=post_data)
 
-    post_file_path = '../complex-myrecipes-output/posts/{slug}.html'.format(slug=post_metadata['slug'])
+    post_file_path = '../formogtoflur-myrecipes-output/posts/{slug}.html'.format(slug=post_metadata['slug'])
 
     os.makedirs(os.path.dirname(post_file_path), exist_ok=True)
     with open(post_file_path, 'w') as file:
